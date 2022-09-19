@@ -17,3 +17,4 @@ This repository holds my practice project showing basic CSS and HTML to style a 
 ## What the site looks like
 I am uplading an image instead of using github pages since this is a relatively simply practice project.  Hopefully, I will build my skills for more complex websites.
 
+<img src="https://github.com/stephenfitzsimon/CheatSheet/blob/main/cheatsheet_screenshot.png?raw=true"></img>
