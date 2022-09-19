@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<!-- This is the HTML file for the CSS Cheat Sheet project on Codecademy -->
+<html>
+    <head>
+        <title>CSS Cheat Sheet</title>
+        <link href="style.css" rel="stylesheet" type="text/css">
+    </head>
+    <header>
+        <span class="nav-span">
+            <nav>
+                <a href = '#what_is_css'>What is CSS?</a><br>
+                <a href = '#css_and_html'>CSS and HTML</a><br>
+                <a href="#css_code_structure">CSS Code Structure</a><br>
+                <a href="#common_properties">Common CSS Styling Properties</a><br>
+                <a href="#colors">Colors</a><br>
+                <a href="#fonts">Fonts</a><br>
+                <a href="#positionings">Positioning</a>
+            </nav>
+        </span>
+        <h1>CSS Cheat Sheet</h1>
+    </header>
+    <body>
+        <div class = "article">
+            <a name="what_is_css"></a>
+            <h2 class="article-title">What is CSS?</h2>
+            <p class="article-text">
+                CSS is the code that styles a website.  CSS stands for Cascading Style Sheets, and describes how the browser should represent the content of the HTML file.  The CSS file ends with the extension <code>.css</code>.
+            </p>
+        </div>
+        <div class = "article">
+            <a name="css_and_html"></a>
+            <h2 class="article-title">CSS and HTML</h2>
+            <p class="article-text">
+                CSS code is used to style HTML content in three ways:
+                <ol>
+                    <li>Within the HTML tag using the <code>style</code> attribute</li>
+                    <li>Within the HTML file (generally within the <code>head</code> tag) enclosed by the <code>style</code> tag.</li>
+                    <li>Within a seperate file with the <code>.css</code> extension.</li>
+                </ol>
+                Generally best practice is to seperate the CSS code and the HTML code, so that the website is organized in a modular fashion.  This makes for easier maintenance and scalability.  When an external CSS file is used, it must be linked to the HTML file using the <code>link</code> tag with the attributes: <code>href="/path/to/file" rel="stylesheet" type="text/css"</code>.
+            </p>
+        </div>
+        <div class = "article">
+            <a name="css_code_structure"></a>
+            <h2 class="article-title">CSS Code Structure</h2>
+            <p class="article-text">
+                CSS code is structured by a selector and a declaration block that contains property/value pairs.  An example is:
+                <span class="code-example">
+                    <code>
+                    selector {
+                        property-one: value; 
+                        property-two: value;
+                        }
+                    </code>
+                </span>
+                The curly bracket characters enclose the declaration block.  Each property value controls the way that the item denoted by the selctore is displayed in the browser.  The selector can be an HTML tag, class, id, or a combination of these.  For example <code>.class-name h1</code> denotes all the <code>h1</code> tags with the class attribute <code>class-name</code>. The more specific selector overrides less specific selectors (for example, an id selector overrides a tag selector); however, the hierarchy can be changes using the <code>!important</code> rule declaration.
+            </p>
+        </div>
+        <div class = "article">
+            <a name="common_properties"></a>
+            <h2 class="article-title">Common CSS Styling Properties</h2>
+            <p class="article-text">
+                Some of the major styling that CSS is used for is the following:
+                <dl>
+                    <dt>Color</dt> <dd>Both foreground and background colors can be controlled, along with their saturation, hue and lightness properties</dd>
+                    <dt>Font</dt> <dd>Different fonts can be selected, along with their properties such as size, weight, line positioning, word spacing and character spacing.</dd>
+                    <dt>Positioning</dt> <dd>The positioning of the content can be controlled through display, and spacing properties</dd>
+                </dl>
+            </p>
+        </div>
+        <div class = "article">
+            <a name="colors"></a>
+            <h2 class="article-title">Color</h2>
+            <p class="article-text">
+                Color properties can define both foreground and background color of HTML content.  This is done with the <code>color</code> and <code>background-color</code> properties of a object, respectively.  Colors can be defined several ways: by a color name, a hexadecimal value, or an RGB value.  In addition, transparency of a color can be set via the <code>alpha</code> value of the color degfinition.
+                <table>
+                    <tr>
+                        <th>Property</th><th>Description</th>
+                    </tr>
+                    <tr>
+                        <td><code>color</code></td><td>Color of the foreground element</td>
+                    </tr>
+                    <tr>
+                        <td><code>background-color</code></td><td>Color of the background element</td>
+                    </tr>
+                </table>
+            </p>
+        </div>
+        <div class = "article">
+            <a name="fonts"></a>
+            <h2 class="article-title">Font</h2>
+            <p class="article-text">
+                Fonts have several defined properties: weight, style, and family.  Weight determines the how thick or thin characters are in a text.  Style determines italic or normal (oblique is also an option, but not as supported).  Finally, font family determines the actual typography that is used; there should always be a "web safe" fall-back option for these.  However, fonts can be imported from websites such as <a href="https://fonts.google.com/">Google Fonts</a>, or stored locally by using the <code>@font-face</code> rule.
+                <table>
+                    <tr>
+                        <th>Property</th><th>Description</th>
+                    </tr>
+                    <tr>
+                        <td><code>font-weight</code></td><td>Thinness and thickness of the character lines.  For example: <code>bold</code>.</td>
+                    </tr>
+                    <tr>
+                        <td><code>font-style</code></td><td>Determines the italic or normal style.</td>
+                    </tr>
+                    <tr>
+                        <td><code>font-family</code></td><td>Determines the actual font style; for example, <code>Helvetica</code> or <code>Times New Roman</code>.</td>
+                    </tr>
+                </table>
+            </p>
+        </div>
+        <div class = "article">
+            <a name="positionings"></a>
+            <h2 class="article-title">Positioning</h2>
+            <p class="article-text">
+                Positing determines where the HTML elements are displayed on the screen. The default positing is static; however, there are also fixed, relative and absolute positining schemes.  Fixed items remain in the same place regardless of user scrolling; relative items are displayed at a position relative to their original position; and, finally, absolute positions an element relative to its parent object's position.  In addition to these schemes, there is the display property of an object which determines the render block of an element; these are block, inline and inline-block values. Block items take up the entire width of their container, whereas in line items take up as little horizontal space as possible. Inline-block items are able to be placed next to each other in a horizontal row.
+            </p>
+        </div>
+        <div class = "article">
+            <h2 class="article-title"></h2>
+            <p class="article-text"></p>
+        </div>
+    </body>
+    <footer>
+        <p>This website was coded by Stephen FitzSimon</p>
+    </footer>
+</html>
